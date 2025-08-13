@@ -1,0 +1,12 @@
+STDP Simulation Summary
+date: 2025-08-13T20:57:26.651215Z
+n_pairs: 120
+initial_weight: 128
+final_weight: 0
+R_syn_initial_ohm: 50694
+R_syn_final_ohm: 1000
+tau_mem_ms: 10.0
+
+Observations:
+- Weight decreased (potentiation) as expected for pre->post pairing with dt=+10 ms.
+- Membrane response amplitude increased for the final (potentiated) weight due to lower synaptic resistance.

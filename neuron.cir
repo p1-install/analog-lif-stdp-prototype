@@ -1,0 +1,15 @@
+Vpre pre 0 PULSE(0 1 0 1u 1u 100u 500u) ; pre-synaptic spike
+Rsyn pre vmem {Rsyn_val}
+Cmem vmem 0 100n
+Rleak vmem 0 100k
+Vref ref 0 DC 2.5
+Bcomp out_comp 0 V=V(vmem)>2.5
+S1 vmem 0 out_comp sw_mod
+.model sw_mod sw(Ron=10 Roff=1Meg Vt=0.5)
+.param Rsyn_val=10k
+.tran 1u 10m
+.control
+run
+plot v(vmem)
+.endc
+.end
